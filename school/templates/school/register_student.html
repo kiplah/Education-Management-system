@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Student</title>
+</head>
+<body>
+    <h2>Register Student</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+    <a href="{% url 'students_list' %}">View All Students</a>
+</body>
+</html>

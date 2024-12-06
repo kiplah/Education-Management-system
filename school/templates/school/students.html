@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Students</title>
+    <style>
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 1rem 2rem;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #003f7f;
+            padding: 0.5rem 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        table th, table td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            background-color: #003f7f;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .action-buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: #0056b3;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            margin-right: 5px;
+            transition: background 0.3s;
+        }
+
+        .action-buttons a:hover {
+            background-color: #003f7f;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Student List</h1>
+</header>
+
+<nav>
+    <a href="/school/">Home</a>
+    <a href="/school/register/">Register Student</a>
+    <a href="/school/enroll/">Enroll Student</a>
+    <a href="/school/payment/">Make Payment</a>
+    <a href="/school/students/">View Students</a>
+    <a href="/school/enrollments/">View Enrollments</a>
+    <a href="/school/payments/">View Payments</a>
+    <a href="/school/logout/">Logout</a>
+</nav>
+
+<main>
+    <h2>All Registered Students</h2>
+    <p>Below is the list of students currently registered in the system:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Student Name</th>
+                <th>Registration Number</th>
+                <th>Email</th>
+                <th>Program</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example rows. Replace these with dynamic content -->
+            <tr>
+                <td>1</td>
+                <td>Jane Doe</td>
+                <td>REG123456</td>
+                <td>jane.doe@example.com</td>
+                <td>BSc Computer Science</td>
+                <td class="action-buttons">
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>John Smith</td>
+                <td>REG654321</td>
+                <td>john.smith@example.com</td>
+                <td>BSc Civil Engineering</td>
+                <td class="action-buttons">
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </td>
+            </tr>
+            <!-- Add more rows dynamically -->
+        </tbody>
+    </table>
+</main>
+
+<footer>
+    &copy; 2024 Education MIS. All rights reserved.
+</footer>
+
+</body>
+</html>

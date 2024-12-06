@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrollments List</title>
+</head>
+<body>
+    <h2>Enrollments List</h2>
+    <form method="GET" action="">
+        <input type="text" name="q" placeholder="Search students..." value="{{ request.GET.q }}">
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% for enrollment in enrollments %}
+        <li>
+            {{ enrollment.student.name }} - {{ enrollment.course_name }} - {{ enrollment.date_of_enrollment }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'enroll_student' %}">Enroll New Student</a>
+</body>
+</html>

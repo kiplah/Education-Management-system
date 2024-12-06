@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payments List</title>
+</head>
+<body>
+    <h2>Payments List</h2>
+    <form method="GET" action="">
+        <input type="text" name="q" placeholder="Search students..." value="{{ request.GET.q }}">
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% for payment in payments %}
+        <li>
+            {{ payment.student.name }} - {{ payment.payment_status }} - Amount Paid: {{ payment.amount_paid }} - Amount Due: {{ payment.amount_due }} - Payment Date: {{ payment.payment_date }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'make_payment' %}">Make New Payment</a>
+</body>
+</html>

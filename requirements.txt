@@ -1,0 +1,6 @@
+Django>=3.2,<4.0  # Django framework
+pytz>=2021.1  # Timezone support
+sqlparse>=0.4.1  # SQL parsing library
+django-crispy-forms>=1.14.0  # For enhancing form layouts
+django-bootstrap4>=22.3  # Bootstrap integration for frontend styling
+asgiref>=3.3.4  # For async support in Django
